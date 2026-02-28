@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 2 - Stickers</title>
+        <style>
+            body        {   padding-top: 2rem; text-align: center; background-color:steelblue; font-family: Arial, Helvetica, sans-serif;}
+            .container  {   display: flex; justify-content: center; gap: 0.5rem;}
+            img         {   padding-bottom: 1.5rem; height: 150px; width: 150px;}
+            #contadorStickers {font-weight: bold;}
+        </style>
+    </head>
+
+    <body>
+        <h3>Puedes llevar hasta 10 stickers en total</h3>
+        <div class="container">
+            <div>
+                <img src="./assets/imgs/HTML5_logo.png" sizes="1" alt="Sticker 1"><br>
+                <input id="sticker1" type="text">
+            </div>
+            <div>
+                <img src="./assets/imgs/CSS3_logo.png" alt="Sticker 2"><br>
+                <input id="sticker2" type="text">
+            </div>
+            <div>
+                <img src="./assets/imgs/JS_logo.png" alt="Sticker 3"><br>
+                <input id="sticker3" type="text">
+            </div>
+        </div>
+        <p id="contadorStickers"></p>
+        <button onclick="
+            let sticker1 = Number(document.querySelector('#sticker1').value),
+                sticker2 = Number(document.querySelector('#sticker2').value),
+                sticker3 = Number(document.querySelector('#sticker3').value),
+                contadorStickers = document.querySelector('#contadorStickers'),
+                totalStickers = sticker1 + sticker2 + sticker3;
+                
+            if (totalStickers <= 10 && totalStickers > -1){
+                contadorStickers.textContent = 'Llevas ' + totalStickers + ' stickers';
+            } else if (totalStickers > 10) {
+                contadorStickers.textContent = 'Llevas demasiados stickers';
+            } else {
+                contadorStickers.textContent = 'Por favor, ingresa datos válidos';
+            }
+        ">Verificar</button>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 3 - Password</title>
+        <style>
+            body    {   padding-top: 2rem; text-align: center; background-color: steelblue; font-family: Arial, Helvetica, sans-serif;}
+            #passwordStatus {font-weight: bold;}
+            select  {   width: 35px; border-radius: 5px;}
+        </style>
+    </head>
+
+    <body>
+        <section>
+            <h3>Ingresa el Password</h3>
+            <select name="select1" id="select1">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <select name="select2" id="select2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <select name="select3" id="select3">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+
+            <br><br>
+
+            <button onclick="
+                let select1 = document.querySelector('#select1').value,
+                    select2 = document.querySelector('#select2').value,
+                    select3 = document.querySelector('#select3').value,
+                    selectedPassword = select1 + select2 + select3,
+                    passwordStatus = document.querySelector('#passwordStatus');
+
+                if (selectedPassword === '911') {
+                    passwordStatus.textContent = 'Password 1 correcto';
+                    passwordStatus.style.color = 'greenyellow';
+                } else if (selectedPassword === '714') {
+                    passwordStatus.textContent = 'Password 2 correcto';
+                    passwordStatus.style.color = 'greenyellow';
+                } else {
+                    passwordStatus.textContent = 'Password Incorrecto';
+                    passwordStatus.style.color = 'black';
+                }              
+            ">Ingresar</button>
+
+            <p id="passwordStatus"></p>
+        </section>
+    </body>
+</html>

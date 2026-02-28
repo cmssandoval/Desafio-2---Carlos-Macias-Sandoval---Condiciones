@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 1 - Imagen</title>
+        <style>
+            body    {   padding-top: 3rem; text-align: center; background-color: steelblue;}
+        </style>
+    </head>
+
+    <body>
+        <img id="img1" src="https://place.dog/300/300" alt="Imagen 1" onerror="this.onerror=null; this.src='./assets/imgs/img1.jpg';" onclick="
+            let img1 = document.querySelector('#img1');
+            
+            img1.style.border === ''
+            ? img1.style.border = '2px solid red'
+            : img1.style.border = '';
+            
+        ">
+    </body>
+</html>
